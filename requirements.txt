@@ -1,0 +1,5 @@
+pandas
+jupyter
+numpy
+hazm
+nltk
