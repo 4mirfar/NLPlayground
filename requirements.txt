@@ -6,3 +6,7 @@ nltk
 wordcloud
 matplotlib
 pyspellchecker
+tensorflow
+scikit-learn
+keras
+tqdm
