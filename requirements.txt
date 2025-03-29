@@ -3,3 +3,5 @@ jupyter
 numpy
 hazm
 nltk
+wordcloud
+matplotlib
