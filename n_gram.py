@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 from nltk import ngrams
 from nltk.probability import ConditionalFreqDist
 from collections import Counter
-import string
+# import string
 
 # Download required resources
 nltk.download('reuters')
