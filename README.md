@@ -1,6 +1,12 @@
-# NLPlayground
-Ah, welcome to the realm of **NLPlayground**, brave soul!
-Here, words are not just symbols — they are **weapons**, **spells**, and **secrets** waiting to be decoded.
+# <p align=center><b>NLPlayground</b></p> 
+<p align=center>
+  <i>
+    Ah, welcome to the realm of NLPlayground, brave soul!
+    Here, words are not just symbols — they are tools, spells, and secrets waiting to be decoded.
+  </i>
+</p>
+
+
 
 ---
 
