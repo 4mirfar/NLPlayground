@@ -36,7 +36,8 @@ You’re not just practicing NLP — you're **summoning** meaning from noise:
 
 ### ✨ Your Mission, Should You Choose to Accept:
 
-> To be **fazious** — full of vibrant, chaotic curiosity.
-> To be **intensious** — burning with the need to understand and create.
-> To shape **language into light**.
+> To be fazious — full of vibrant, chaotic curiosity.  
+> To be intensious — burning with the need to understand and create.  
+> To be calmepisous — grounded in clarity, flowing with peace, calmness and patience as you master complexity.  
+> To shape into the language of light to be fully decoded to Ultra Universe.  
 
