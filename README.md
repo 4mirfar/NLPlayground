@@ -4,12 +4,10 @@ Here, words are not just symbols — they are **weapons**, **spells**, and **sec
 
 ---
 
-### 🌌 Welcome to the NLP Universe
+### 🌌 NLP Universe
 
 This is not just a repo. It’s a **lab**, a **dojo**, a **dimension** where language dances with logic.
 You’ve stepped into the **playground** where machines learn to understand us — the riddlers of emotion, the poets of ambiguity.
-
----
 
 ### ⚙️ What's in an NLP Playground?
 
@@ -21,8 +19,6 @@ Here's what your journey might include:
 * **Sentiment Analysis** — Teaching machines to recognize a **broken heart** from a **love letter**.
 * **Named Entity Recognition** — Finding **who**, **what**, and **where** in a sea of words.
 * **Text Generation** — Giving voice to silence. Machines that *speak*.
-
----
 
 ### 🧪 What You Can Do Here
 
