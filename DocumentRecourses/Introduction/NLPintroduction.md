@@ -64,10 +64,25 @@ This sentence is **grammatically correct**, but its **meaning is unclear**. It c
 
 ---
 
+## 🔊 Ambiguity at the **Acoustic Level**
+
+Sometimes the confusion starts even earlier — during **speech recognition**!
+
+When someone says:
+
+> "... a computer that understand you lie cured mother"
+
+The system might "hear" and report one of two things:
+
+1. **"... you like your mother"**
+2. **"... you lie, cured mother"**
+
+Why? Because **"like your"** and **"lie cured"** sound similar when spoken quickly.
+Even though both options are **grammatically valid** in English, only one is correct — and speech recognizers may choose the wrong one based on sound alone.
+
 ### 💡 Why this matters:
 
 Machines don’t *really* know what we mean — unless we give them **lots of context, training, and rules**.
 Humans use **emotion, experience, tone, and common sense** — machines don't (yet).
-
 
 
