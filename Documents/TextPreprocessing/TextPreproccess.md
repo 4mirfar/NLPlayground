@@ -77,3 +77,24 @@ Example:
 ["I", "hate", "dogs", "?"]
 
 ⚠️ Some libraries like `CountVectorizer` in scikit-learn remove punctuation by default during tokenization.
+
+## Character-Based Tokenization (Simple)
+
+Instead of breaking text into words, we can break it into characters.
+
+Example:
+"dog" → ["d", "o", "g"]
+
+### Why do this?
+
+✅ Pros:
+- We don’t need to save a big word list.
+- It helps when we see new or weird words.
+- It works well in deep learning models.
+
+❌ Cons:
+- Each word becomes many tokens → longer input.
+- Characters don’t have much meaning alone.
+- It’s harder for the model to learn from long sequences of characters.
+
+
