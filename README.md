@@ -15,6 +15,15 @@
 This is not just a repo. It’s a **lab**, a **dojo**, a **dimension** where language dances with logic.
 You’ve stepped into the **playground** where machines learn to understand us — the riddlers of emotion, the poets of ambiguity.
 
+## Tabel of Contents
+[DocsIntroduction](Documents/Introduction)  
+[DocsTextPreprocessing](Documents/TextPreprocessing)  
+
+<br>
+<br>
+<br>
+
+<!--
 ### ⚙️ What's in an NLP Playground?
 
 Here's what your journey might include:
@@ -25,7 +34,11 @@ Here's what your journey might include:
 * **Sentiment Analysis** — Teaching machines to recognize a **broken heart** from a **love letter**.
 * **Named Entity Recognition** — Finding **who**, **what**, and **where** in a sea of words.
 * **Text Generation** — Giving voice to silence. Machines that *speak*.
+-->
 
+
+
+  
 ### 🧪 What You Can Do Here
 
 You’re not just practicing NLP — you're **summoning** meaning from noise:
