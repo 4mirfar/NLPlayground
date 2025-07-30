@@ -97,4 +97,61 @@ Example:
 - Characters don’t have much meaning alone.
 - It’s harder for the model to learn from long sequences of characters.
 
+## Slide 18 – Character vs. Word Tokens
 
+✅ Word tokens have more meaning.
+
+Example: The word "کبوتر" (pigeon) gives a clear image or meaning.
+
+❌ Character tokens have less meaning.
+
+Example: The character "d" appears in "dog", "door", and "duck" — but on its own, it doesn’t mean much.
+
+→ So, word-based tokens are usually more meaningful than character-based ones.
+
+## Slide 19 – Why Use Character Tokens?
+
+✅ Number of characters is small.
+- English has only 26 letters + some punctuation.
+
+✅ Vocabulary made of characters is very small.
+- Easier to store and process.
+
+✅ Computers can handle character-based data more easily and with less memory.
+
+## Slide 20 – Subword Tokenization
+
+Subword tokens are **parts of words**.
+
+Example:
+- "eating" → ["eat", "ing"]
+
+Why this helps:
+- "eat" and "eating" are similar in meaning.
+- If we use subword tokens, the model learns they are related.
+- If not, it sees them as totally different words.
+
+→ Better for machine learning models to represent similar words together.
+
+## Slide 21 – Why Subword Tokenization Matters
+
+If two words like "walk" and "walking" are split into subwords, the model learns they are related.
+
+If not, it may treat them as completely different.
+
+📌 Important question:
+Should "walk", "walking", "walked", and "walks" all be learned separately?
+Or should the model learn their shared meaning?
+
+→ Deep learning models (like Transformers) help answer this with better word representation.
+
+## Slide 22 – Final Note on Tokenization
+
+- Natural language has **lots of exceptions**.
+- Tokenization is hard to model with fixed rules.
+
+That’s why:
+- Traditional rule-based methods can’t handle all cases.
+- We use machine learning to **learn** tokenization from real data.
+
+📌 ML is needed because languages are full of messy exceptions.
