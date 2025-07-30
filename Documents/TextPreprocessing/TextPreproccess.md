@@ -263,3 +263,30 @@ Example:
   - "un" and "ness" = affixes
 
 → Understanding word structure helps in better normalization.
+
+## Slide 31 – What is Stemming?
+
+**Stemming** = Cutting a word down to its root (stem).
+
+- The goal is to remove suffixes (like -ed, -ing, -s, etc.)
+- This helps group similar words.
+
+Examples:
+- "automate", "automated", "automatic", "automation"  
+  → All become: **automat**
+
+⚠️ Different languages need different stemming rules.
+
+## Slide 32 – How Stemming Works
+
+Stemming = remove or replace word endings (suffixes)
+
+- It’s a simple rule-based process.
+- Helps match different forms of a word in search and NLP tasks.
+
+Example:
+- "walking" → "walk"
+- "plastered" → "plaster"
+
+⚠️ Not always perfect! Sometimes it cuts too much or too little.
+
