@@ -155,3 +155,55 @@ That’s why:
 - We use machine learning to **learn** tokenization from real data.
 
 📌 ML is needed because languages are full of messy exceptions.
+
+## Slide 23 – Stopwords
+
+**Stopwords** are very common words that appear a lot in text but don’t carry much meaning.
+
+Examples:
+
+- English: “the”, “and”, “or”, “is”, “it”
+- Persian: "و", "در", "یا", "آن"
+
+🟡 They are usually:
+- Pronouns, prepositions, conjunctions, helper verbs, etc.
+
+🛠 No universal list of stopwords exists — each tool may have its own.
+
+## Slide 24 – Why Remove Stopwords?
+
+✅ Useful in many cases:
+
+- Helps reduce the size of the text
+- Makes important words stand out more
+- Improves accuracy for tasks like text classification
+
+⚠️ But not always good to remove:
+
+- Some stopwords may be important depending on the task
+
+## Slide 25 – When Removing Stopwords is Bad
+
+❌ In tasks like:
+
+- **Machine translation**: stopwords need to be translated
+- **Question answering**: removing them might change meaning
+- **Text summarization**: affects grammar and structure
+
+Example:
+
+Original: “The movie was **not good** at all”  
+After removing stopwords: “movie good”
+
+→ Meaning is completely changed!
+
+## Slide 26 – Libraries with Stopword Lists
+
+Popular NLP libraries that provide stopword lists:
+
+- **NLTK**
+- **spaCy**
+- **Gensim**
+- **Scikit-learn**
+
+⚠️ Be careful: Removing stopwords blindly can change meaning!
