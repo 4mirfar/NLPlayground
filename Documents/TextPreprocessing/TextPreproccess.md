@@ -207,3 +207,59 @@ Popular NLP libraries that provide stopword lists:
 - **Scikit-learn**
 
 ⚠️ Be careful: Removing stopwords blindly can change meaning!
+
+
+## Important: Word Nomalizati0on and Stemming (27)
+
+**Text normalization** = Converting words into a standard form.
+
+Why? Because the same word can appear in many different ways:
+
+Examples:
+- "labeled" vs. "labelled"
+- "extra-linguistic" vs. "extralinguistic"
+
+→ Normalize them to a single standard form.
+
+## Slide 28 – What is Normalization?
+
+Make all forms of a word the same.
+
+Example:  
+"USA" = "U.S.A" → should be treated as the same.
+
+Also:
+- "window" and "windows" → both should map to "window" in some tasks.
+
+This helps in:
+- Searching
+- Matching
+- Indexing
+
+## Slide 29 – Case Normalization
+
+Often we convert **all letters to lowercase** for consistency.
+
+Examples:
+- "USA" vs. "us"
+- "Fed" vs. "fed"
+- "SAIL" vs. "sail"
+
+⚠️ But case matters in some tasks like:
+- Sentiment analysis
+- Information extraction
+- Machine translation
+
+## Slide 30 – Morphology & Word Structure
+
+Some words are made of smaller parts (called **morphemes**):
+
+- **Stem**: the core meaning part of a word
+- **Affix**: the extra parts (prefixes/suffixes)
+
+Example:
+- In "unhappiness":  
+  - "happy" = stem  
+  - "un" and "ness" = affixes
+
+→ Understanding word structure helps in better normalization.
