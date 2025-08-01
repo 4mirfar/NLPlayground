@@ -16,9 +16,9 @@ This is not just a repo. It’s a **lab**, a **dojo**, a **dimension** where lan
 You’ve stepped into the **playground** where machines learn to understand us — the riddlers of emotion, the poets of ambiguity.
 
 ## Tabel of Contents
-[DocsIntroduction](Documents/1_Introduction)  
-[DocsTextPreprocessing](Documents/2_Text_Preprocessing)  
-[DocsLanguageModeling](Documents/3_Language_Modeling)
+1. [DocsIntroduction](Documents/1_Introduction)  
+2. [DocsTextPreprocessing](Documents/2_Text_Preprocessing)  
+3. [DocsLanguageModeling](Documents/3_Language_Modeling)
 <br>
 <br>
 <br>
