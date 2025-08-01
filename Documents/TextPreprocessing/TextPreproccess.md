@@ -325,3 +325,58 @@ Sentence:
   → Lemmatized: "the boy car be different color"
 
 🛠 Lemmas are usually looked up in a **dictionary** (not just by rule).
+
+
+## Slide 35 – Sentence Segmentation
+
+**Sentence segmentation** = Finding where a sentence ends.
+
+Usually we use punctuation like:
+- Period `.`
+- Question mark `?`
+- Exclamation `!`
+
+⚠️ But it's not always clear:
+- "Dr." or "U.S.A." use dots but are **not** sentence ends.
+- Numbers like "3.4" use dots too.
+
+Solution: Use classifiers (models) to decide:
+- Is this the **End of Sentence (EOS)**?
+- Or **Not EOS**?
+
+Techniques: Rules, regex, or machine learning.
+
+## Slide 36 – Decision Trees for EOS
+
+We can use a **Decision Tree** to figure out if a word ends a sentence.
+
+Simple idea:
+- Is the word at the end of a sentence?
+  → Yes or No?
+
+Model checks some features and makes a decision.
+
+## Slide 37 – Features for EOS Decision
+
+Models use features like:
+
+- Word shape after the dot:
+  - Does it start with a capital letter?
+  - Is it all capital letters? (e.g., "USA")
+  - Is it a number?
+
+- Word length (e.g., abbreviations are often short)
+- Frequency of seeing that word at sentence end or start
+
+→ These features help classify if the period means a sentence end.
+
+## Slide 38 – ML Models for Sentence Boundary Detection
+
+Some common models used:
+
+- **SVM** (Support Vector Machines)
+- **Decision Trees**
+- **Logistic Regression**
+- **Neural Networks**
+
+Each learns patterns from data to detect where a sentence ends.
