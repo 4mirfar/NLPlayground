@@ -290,3 +290,38 @@ Example:
 
 ⚠️ Not always perfect! Sometimes it cuts too much or too little.
 
+## Slide 33 – Porter’s Stemming Algorithm
+
+**Porter Stemmer** is a well-known and simple stemming algorithm for English.
+
+It uses rules to cut word endings step by step.
+
+### Examples:
+
+**Step 1a:**
+- "caresses" → "caress"
+- "ponies" → "poni"
+- "cats" → "cat"
+
+**Step 1b:**
+- "walking" → "walk"
+- "plastered" → "plaster"
+
+**Step 2 and 3 (longer endings):**
+- "relational" → "relate"
+- "digitizer" → "digitize"
+- "adjustable" → "adjust"
+
+## Slide 34 – Lemmatization
+
+**Lemmatization** = Mapping a word to its **base form** (called lemma or headword)
+
+Examples:
+- "am", "are", "is" → "be"
+- "cars", "car's", "cars'" → "car"
+
+Sentence:
+- "The boy's cars are different colors"  
+  → Lemmatized: "the boy car be different color"
+
+🛠 Lemmas are usually looked up in a **dictionary** (not just by rule).
