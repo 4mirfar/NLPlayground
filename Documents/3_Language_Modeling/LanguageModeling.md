@@ -115,3 +115,48 @@ P(transparent | its, water, is, so)
 
 This method is exact, but can be complex without simplification.
 
+
+## Summary: Language Modeling (Slides 8–21)
+
+- We want to compute the probability of a sentence:
+  P(w1, w2, ..., wn)
+
+- We use the **chain rule** to break it down:
+  P(w1) × P(w2 | w1) × P(w3 | w1, w2) ...
+
+- This gives accurate results but is **computationally expensive**.
+
+- Why? Because there are too many word combinations to count.
+
+- So we simplify using the **Markov assumption**:
+  Only look at a few previous words (not all of them).
+
+- **Unigram model**:
+  Each word is independent:  
+  P(w1, w2, ...) = P(w1) × P(w2) × ...
+
+- Unigram output sounds random:
+  “fifth an of futures the an ...”
+
+- **Bigram model**:
+  P(wi | wi-1), uses 1 previous word.
+
+- Bigram output has more structure:
+  “texaco rose one in this issue is ...”
+
+- **Trigram model**:
+  P(wi | wi-2, wi-1), uses 2 previous words.
+
+- These are called **N-gram models** (N = 1, 2, 3, ...)
+
+- Higher N means more context but also more data needed.
+
+- We estimate probabilities using counts:
+  P(w2 | w1) = Count(w1, w2) / Count(w1)
+
+- Example:
+  P("am" | "I") = Count("I am") / Count("I")
+
+- N-gram models are trained by counting word sequences from real data.
+
+- Used in many NLP tasks like translation, speech recognition, and autocomplete.
