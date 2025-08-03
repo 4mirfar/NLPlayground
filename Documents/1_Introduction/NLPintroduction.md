@@ -1,4 +1,4 @@
-# NLP Pyramid
+wh# NLP Pyramid
 
 The image below is a Natural Language Processing (NLP) Pyramid, a conceptual diagram showing the layered structure of how language is understood and processed by machines. Each layer builds upon the one below it — from raw forms to higher meaning.
 
@@ -86,3 +86,39 @@ Machines don’t *really* know what we mean — unless we give them **lots of co
 Humans use **emotion, experience, tone, and common sense** — machines don't (yet).
 
 
+## Slide 49 – Perplexity (Important)
+
+### Definition
+Perplexity measures how well a language model predicts a sequence of words.
+
+It answers:
+> "On average, how many equally likely choices does the model think it has for the next word?"
+
+---
+
+### Calculation Steps
+1. Take a test set (sentences not seen in training).
+2. Compute the probability of the whole sequence: P(w1, w2, ..., wN).
+3. Normalize by the sequence length (N).
+4. Take the inverse of that average probability.
+
+---
+
+### Formula
+Perplexity = ( 1 / P(w1, w2, ..., wN) )^(1/N)  
+
+Where:
+- **P(w1, ..., wN)** = probability of the sequence
+- **N** = number of words
+
+---
+
+### Interpretation
+- **Lower perplexity** → Better model (less uncertainty)
+- **Higher perplexity** → Worse model (more uncertainty)
+
+---
+
+### Example
+If Perplexity = 10:
+- The model’s uncertainty is like having 10 equally likely next-word options.
