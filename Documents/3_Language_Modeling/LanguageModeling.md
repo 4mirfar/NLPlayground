@@ -227,3 +227,47 @@ Example dialogue-related sentences for training:
 - when is caffe venezia open during the day
 
 ![alt text](imgs/photo_1.png)
+
+## Slide 43 – Evaluating a Language Model
+
+- We want to know: How good is our LM?
+- A good LM:
+  - Gives higher probabilities to more common/realistic sentences.
+  - Gives lower probabilities to rare/incorrect sentences.
+- It should reflect both grammatical correctness and common usage.
+
+## Slide 44 – Evaluation Process
+
+- Train the LM on a **training set**.
+- Test it on a **different test set** that the model hasn’t seen.
+- Use an **evaluation metric** to measure how well the LM predicts the test set.
+
+## Slide 45 – Why Separate Data?
+
+- The training set is for learning parameters.
+- The test set is for checking performance.
+- The test set must be different to avoid overfitting.
+- The evaluation metric tells us how good the LM is on unseen data.
+
+## Slide 46 – Extrinsic Evaluation
+
+- Measure LM performance inside a **real application**.
+- Examples:
+  - Spell correction → % of correctly fixed words.
+  - Machine translation → % of correct translations.
+  - Speech recognition → Word Error Rate (WER).
+- Compare two LMs (A vs. B) in the same task.
+
+## Slide 47 – Problems with Extrinsic Evaluation
+
+- Time-consuming and expensive.
+- Not always practical for every task.
+- Suggested alternative: **Intrinsic Evaluation** (e.g., perplexity).
+- Intrinsic evaluation is faster, but only works well if the test data is very similar to the training data.
+
+## Slide 48 – Shannon Game
+
+- A simple way to measure LM quality:
+  - Hide the next word and ask the model (or a human) to guess it.
+- Unigram models perform poorly at this game.
+- N-gram models do better because they use context.
