@@ -169,3 +169,29 @@ P(w1) × P(w2 | w1) × P(w3 | w1, w2) × ... × P(wn | wn-2, wn-1)
 ⬇️ In trigram form (3-gram):
 
 P(wi | wi−2, wi−1) = Count(wi−2, wi−1, wi) / Count(wi−2, wi−1)
+
+## Summary – Slides 23 to 30: Start/End Tokens & N-gram Probability
+
+1. Use `<s>` to mark the start of a sentence, and `</s>` for the end.
+
+2. In bigram models:
+   - P("first word" | `<s>`)
+   - P(`</s>` | "last word")
+
+3. In trigram models:
+   - Add two start tokens: `<s> <s> I am Sam </s>`
+
+4. These tokens help handle:
+   - The beginning of a sentence (provides context)
+   - The end of a sentence (tells the model when to stop)
+
+5. Without `</s>`, the model may keep generating words forever.
+
+6. N-gram sentence probability:
+   - P(w1, w2, ..., wn) ≈  
+     P(w1|<s>) × P(w2|w1) × ... × P(</s>|wn)
+
+7. Probabilities are calculated using counts from real data:
+   - P(wi | wi-1) = Count(wi-1, wi) / Count(wi-1)
+
+8. Final sentence probability is the product of all N-gram probabilities.
