@@ -160,3 +160,12 @@ This method is exact, but can be complex without simplification.
 - N-gram models are trained by counting word sequences from real data.
 
 - Used in many NLP tasks like translation, speech recognition, and autocomplete.
+
+## Slide 22 – N-gram Probability (General Formula)
+
+P(w1, w2, ..., wn) ≈  
+P(w1) × P(w2 | w1) × P(w3 | w1, w2) × ... × P(wn | wn-2, wn-1)
+
+⬇️ In trigram form (3-gram):
+
+P(wi | wi−2, wi−1) = Count(wi−2, wi−1, wi) / Count(wi−2, wi−1)
