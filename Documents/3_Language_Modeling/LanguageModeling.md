@@ -195,3 +195,35 @@ P(wi | wi−2, wi−1) = Count(wi−2, wi−1, wi) / Count(wi−2, wi−1)
    - P(wi | wi-1) = Count(wi-1, wi) / Count(wi-1)
 
 8. Final sentence probability is the product of all N-gram probabilities.
+
+## Slide 32 – Count Matrix
+
+- Create a **matrix of counts** for all bigrams in the corpus.
+- Rows = previous word, columns = next word.
+- Each cell contains the number of times that bigram occurred in the training data.
+
+## Slide 33 – Probability Matrix
+
+- Convert the count matrix into a **probability matrix**.
+- Formula:
+  P(next_word | previous_word) = Count(previous_word, next_word) / Count(previous_word)
+- Each row in the probability matrix sums to 1.
+
+## Slide 34 – Language Model
+
+- The probability matrix becomes the **language model**.
+- This model can:
+  - Calculate the probability of a sentence.
+  - Generate new sentences based on learned probabilities.
+
+## Slide 35 – Example Sentences
+
+Example dialogue-related sentences for training:
+- can you tell me about any good cantonese restaurants close by
+- mid priced thai food is what i’m looking for
+- tell me about chez panisse
+- can you give me a listing of the kinds of food that are available
+- i’m looking for a good place to eat breakfast
+- when is caffe venezia open during the day
+
+![alt text](imgs/photo_1.png)
