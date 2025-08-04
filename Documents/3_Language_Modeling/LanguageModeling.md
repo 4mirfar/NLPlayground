@@ -358,3 +358,36 @@ If Perplexity = 10:
 - Probabilities: 0.2, 0.5, 0.25
 - Average −log2: [−log2(0.2) − log2(0.5) − log2(0.25)] / 3 = 1.774
 - PP = 2^1.774 ≈ **3.41**
+
+
+## Slide 58 – Out of Vocabulary (OOV) Words
+
+- OOV = words not seen in the training set.
+- Problem: The model cannot directly assign a probability to them → probability = 0.
+- This issue occurs in all N-gram models.
+
+---
+
+## Slide 59 – Why OOV is a Problem
+
+- If even one OOV word is in a sentence, the probability of the entire sentence becomes zero.
+- This means the model cannot score or process the sentence.
+- In real tasks (translation, search, etc.), this can cause the model to fail.
+
+---
+
+## Slide 60 – Example of OOV Problem
+
+**Training set:**
+- I like apples
+- He eats oranges
+
+**Test sentence:**
+- I like bananas
+
+"bananas" does not appear in training →  
+P("bananas" | "like") = 0 → sentence probability = 0
+
+**Solutions:**
+- Use a special `<UNK>` token to replace all OOV words.
+- Use smoothing methods to assign a small probability to OOVs.
