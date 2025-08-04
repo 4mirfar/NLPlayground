@@ -309,3 +309,31 @@ Where:
 ### Example
 If Perplexity = 10:
 - The model’s uncertainty is like having 10 equally likely next-word options.
+
+## Slide 50 – Perplexity with Chain Rule
+
+- For bigram models:
+  P(w1, w2, ..., wN) = ∏ P(wi | wi-1)
+
+- Perplexity formula:
+  PP(W) = ( ∏ (1 / P(wi | wi-1)) )^(1/N)
+
+- This uses the probabilities from the bigram model to compute PP over the test set.
+
+---
+
+## Slide 51 – Start Token in Perplexity Calculation
+
+- We include the start-of-sentence token `<s>` when calculating perplexity.
+- Example:
+  "<s> I am Sam </s>"
+- This allows us to compute:
+  P("I" | `<s>`), P("am" | "I"), etc.
+
+---
+
+## Slide 52 – Why Include `<s>`?
+
+- Without `<s>`, the probability of the first word has no context.
+- `<s>` gives a defined starting point for the first word.
+- Ensures the model’s probability calculations are consistent for all words in the sentence.
