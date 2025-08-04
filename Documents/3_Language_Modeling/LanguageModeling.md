@@ -376,7 +376,7 @@ If Perplexity = 10:
 
 ---
 
-## Slide 60 – Example of OOV Problem
+## Slide 60 – Example of OOV Problem (Very IMPORTANT)
 
 **Training set:**
 - I like apples
