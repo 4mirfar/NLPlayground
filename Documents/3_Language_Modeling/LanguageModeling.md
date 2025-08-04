@@ -312,28 +312,27 @@ If Perplexity = 10:
 
 ## Slide 50 – Perplexity with Chain Rule
 
-- For bigram models:
+- For a bigram model:
   P(w1, w2, ..., wN) = ∏ P(wi | wi-1)
 
 - Perplexity formula:
   PP(W) = ( ∏ (1 / P(wi | wi-1)) )^(1/N)
 
-- This uses the probabilities from the bigram model to compute PP over the test set.
+- This multiplies the inverse probabilities of each word in the test set, then normalizes by sentence length.
 
 ---
 
 ## Slide 51 – Start Token in Perplexity Calculation
 
-- We include the start-of-sentence token `<s>` when calculating perplexity.
-- Example:
-  "<s> I am Sam </s>"
-- This allows us to compute:
+- Sentences include the start token `<s>` for probability calculation:
+  Example: "<s> I am Sam </s>"
+- This lets us compute:
   P("I" | `<s>`), P("am" | "I"), etc.
 
 ---
 
-## Slide 52 – Why Include `<s>`?
+## Slide 52 – Why `<s>` Is Excluded from N
 
-- Without `<s>`, the probability of the first word has no context.
-- `<s>` gives a defined starting point for the first word.
-- Ensures the model’s probability calculations are consistent for all words in the sentence.
+- `<s>` is not a real word — it’s just a marker for sentence start.
+- We **use it** in probability calculation, but we **don’t count it** in N (sentence length) for perplexity.
+- Including it in N would distort the score because it’s too easy to predict.
