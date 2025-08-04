@@ -336,3 +336,25 @@ If Perplexity = 10:
 - `<s>` is not a real word — it’s just a marker for sentence start.
 - We **use it** in probability calculation, but we **don’t count it** in N (sentence length) for perplexity.
 - Including it in N would distort the score because it’s too easy to predict.
+
+## Slide 53 – Log Perplexity
+
+**Why logs?**
+- Multiplying many tiny probabilities underflows.
+- Using logs turns products into sums:  
+  log(P1·P2·…·PN) = Σ log Pi
+
+**Formulas**
+- Using natural logs:
+  PP = exp( − (1/N) · Σ ln P(wi | context) )
+- Using base-2 logs:
+  PP = 2^( − (1/N) · Σ log2 P(wi | context) )
+
+**Meaning**
+- It’s the exponentiated **average negative log-probability per token**.
+- Lower PP ⇒ model is less “confused”.
+
+**Tiny example (base-2)**
+- Probabilities: 0.2, 0.5, 0.25
+- Average −log2: [−log2(0.2) − log2(0.5) − log2(0.25)] / 3 = 1.774
+- PP = 2^1.774 ≈ **3.41**
