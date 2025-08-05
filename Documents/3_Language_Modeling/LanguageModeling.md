@@ -391,3 +391,80 @@ P("bananas" | "like") = 0 → sentence probability = 0
 **Solutions:**
 - Use a special `<UNK>` token to replace all OOV words.
 - Use smoothing methods to assign a small probability to OOVs.
+
+## Slide 60 – OOV Example
+
+**Training sentences:**
+- I like apples
+- He eats oranges
+
+**Test sentence:**
+- I like bananas
+
+"bananas" was not seen in training →  
+P("bananas" | "like") = 0  
+→ Sentence probability = 0
+
+---
+
+## Slide 61 – Generalization Problem
+
+- N-gram models can't handle new or rare sequences well.
+- They memorize frequent patterns, but fail on unseen ones.
+- This limits their generalization to real-world data.
+
+---
+
+## Slide 62 – Counting is Not Enough
+
+- N-gram models rely only on counts.
+- No understanding of meaning or grammar.
+- They need smoothing or other methods to handle unknowns.
+
+---
+
+## Slide 63 – Shannon's Sentence Generator
+
+- Start from `<s>` (start of sentence).
+- Use probabilities from the bigram model to pick the next word.
+- Move forward word by word until `</s>` (end).
+- Each sentence generated is random but follows training statistics.
+
+Example:
+`<s> I want Chinese food </s>`
+
+---
+
+## Slide 64 – Sentences from Shannon's Game
+
+Some randomly generated bigram-based outputs:
+- "texaco rose one in this issue is ..."
+- "coca cola was in the public eye ..."
+- "i am not going to make it easy ..."
+
+These may sound weird, but they're syntactically okay due to learned word sequences.
+
+---
+
+## Slide 65 – Problem with N-gram Models
+
+- No understanding of **meaning**.
+- "Colorless green ideas sleep furiously" gets a high probability if the word sequences exist.
+- But meaningless sentences may still be considered "good" by the model.
+
+---
+
+## Slide 66 – Dealing with OOV Words
+
+- Replace unknown words with a special token: `<UNK>`
+- Train the model with `<UNK>` as a normal word.
+- At test time, any unknown word becomes `<UNK>`, which the model can now handle.
+
+---
+
+## Slide 67 – Summary: Problems of N-gram Models
+
+- Can't handle OOV words without tricks like `<UNK>`.
+- Don't generalize well to unseen sentences.
+- Just memorize counts — no real understanding.
+- Don't scale well with large vocabulary or long context.
