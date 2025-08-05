@@ -519,3 +519,40 @@ Most combinations will never appear → model is sparse and inefficient.
 2. No sense of word similarity or meaning
 3. Data sparsity: many combinations are missing
 4. Parameter explosion: huge memory requirements for higher N
+
+
+## Slide 77 – Add-One (Laplace) Smoothing
+
+- For every N-gram count, add 1 to avoid zeros.
+- Updated formula:
+  P(wi | wi-1) = (Count(wi-1, wi) + 1) / (Count(wi-1) + V)
+  - V = vocabulary size
+- Ensures all N-grams have some probability.
+
+---
+
+## Slide 78 – Drawback of Add-One Smoothing
+
+- It's **too aggressive**.
+- Gives too much probability to unseen events.
+- Reduces the probability of frequent, correct sequences too much.
+- → Hurts accuracy.
+
+---
+
+## Slide 79 – Better Alternatives
+
+- **Add-k smoothing** (k < 1): Less aggressive than add-one
+- **Good-Turing**: Estimate probabilities based on counts of counts
+- **Backoff / Interpolation**:
+  - If trigram is missing, use bigram or unigram
+  - Combine all levels with weighted averaging
+
+---
+
+## Slide 80 – Why We Need Smoothing
+
+- Prevents sentence probabilities from being zero
+- Makes perplexity usable
+- Helps the model generalize better
+- Allows evaluation on real-world test data
