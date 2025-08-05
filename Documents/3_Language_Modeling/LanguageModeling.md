@@ -468,3 +468,54 @@ These may sound weird, but they're syntactically okay due to learned word sequen
 - Don't generalize well to unseen sentences.
 - Just memorize counts — no real understanding.
 - Don't scale well with large vocabulary or long context.
+
+
+## Slide 69 – Generalization Problem
+
+- N-gram models memorize seen word sequences.
+- They fail to handle new or slightly different phrases.
+- Example:
+  - Seen in training: "a healthy meal"
+  - Test: "a wholesome meal"
+  → The model assigns zero probability even though the meaning is similar.
+
+---
+
+## Slide 70 – No Word Similarity
+
+- Words are treated as IDs with no meaning.
+- The model doesn’t know that:
+  - "car" ≈ "automobile"
+  - "city" ≈ "town"
+- This prevents the model from understanding or generalizing based on meaning.
+
+---
+
+## Slide 71 – Explosion of Parameters
+
+- The number of parameters grows fast as N increases.
+- Bigram: vocab²
+- Trigram: vocab³
+- 4-gram: vocab⁴
+- Example: For vocab = 10,000 → trigram = 10¹² entries
+- Huge memory usage and training data needed.
+
+---
+
+## Slide 72 – Parameter Explosion Example
+
+Vocabulary size = 20,000:
+- Unigram: 20,000
+- Bigram: 400 million
+- Trigram: 8 trillion
+
+Most combinations will never appear → model is sparse and inefficient.
+
+---
+
+## Slide 73 – N-gram Limitations Summary
+
+1. Poor generalization to unseen data
+2. No sense of word similarity or meaning
+3. Data sparsity: many combinations are missing
+4. Parameter explosion: huge memory requirements for higher N
